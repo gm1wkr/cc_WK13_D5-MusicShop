@@ -63,8 +63,16 @@ public class InstrumentTest {
         assertEquals(4, guitar.getNumberOfStrings());
     }
     @Test
+    public void canGetGuitarToPlay(){
+        assertEquals("Dwanggg", guitar.play());
+    }
+    @Test
     public void canGetTinWhistleKey(){
         assertEquals("D", tinWhistle.getKey());
+    }
+    @Test
+    public void canGetTinWhistleToPlay(){
+        assertEquals("DiddleDiDiddleDo", tinWhistle.play());
     }
 
 }
