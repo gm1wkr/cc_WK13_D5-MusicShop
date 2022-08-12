@@ -6,6 +6,8 @@ import static org.junit.Assert.assertEquals;
 public class InstrumentTest {
 
     Piano piano;
+    TinWhistle tinWhistle;
+    Guitar guitar;
 
     @Before
     public void before(){
@@ -16,6 +18,8 @@ public class InstrumentTest {
                 1000.00,
                 "String",
                 83);
+        tinWhistle = new TinWhistle("Tin Whistle", "Deluxe", "Clarke Whistle in D", 20.00, 10.00, "woodwind", "D");
+        guitar = new Guitar("Boomer","XC4", "Bass Guitar", 500.00, 300.00, "String", 4);
     }
 
     @Test
@@ -53,6 +57,14 @@ public class InstrumentTest {
     @Test
     public void canGetMarkup(){
         assertEquals(1000.00, piano.calculateMarkup(), 0.0000001);
+    }
+    @Test
+    public void canGetGuitarNumberOfStrings(){
+        assertEquals(4, guitar.getNumberOfStrings());
+    }
+    @Test
+    public void canGetTinWhistleKey(){
+        assertEquals("D", tinWhistle.getKey());
     }
 
 }
