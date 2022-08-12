@@ -44,7 +44,7 @@ public class InstrumentTest {
     }
     @Test
     public void canGetInstrumentType(){
-        assertEquals("String", piano.getInstrumentType());
+        assertEquals("String", piano.getProductType());
     }
     @Test
     public void canGetNumberOfKeys(){

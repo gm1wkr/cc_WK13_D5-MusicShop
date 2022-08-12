@@ -5,7 +5,7 @@ public abstract class Instrument {
     String description;
     double retailPrice;
     double costPrice;
-    String instrumentType;
+    String productType;
 
     public Instrument(String name, String model, String description, double retailPrice, double costPrice, String instrumentType) {
         this.name = name;
@@ -13,7 +13,7 @@ public abstract class Instrument {
         this.description = description;
         this.retailPrice = retailPrice;
         this.costPrice = costPrice;
-        this.instrumentType = instrumentType;
+        this.productType = instrumentType;
     }
 
     public String getName() {
@@ -36,7 +36,7 @@ public abstract class Instrument {
         return costPrice;
     }
 
-    public String getInstrumentType() {
-        return instrumentType;
+    public String getProductType() {
+        return productType;
     }
 }
