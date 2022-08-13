@@ -16,10 +16,10 @@ public class InstrumentTest {
                 "Grand Piano for Pianoey Stuff",
                 2000.00,
                 1000.00,
-                "String",
+                InstrumentType.Stringed,
                 83);
-        tinWhistle = new TinWhistle("Tin Whistle", "Deluxe", "Clarke Whistle in D", 20.00, 10.00, "woodwind", "D");
-        guitar = new Guitar("Boomer","XC4", "Bass Guitar", 500.00, 300.00, "String", 4);
+        tinWhistle = new TinWhistle("Tin Whistle", "Deluxe", "Clarke Whistle in D", 20.00, 10.00, InstrumentType.Percusion, "D");
+        guitar = new Guitar("Boomer","XC4", "Bass Guitar", 500.00, 300.00, InstrumentType.Stringed, 4);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class InstrumentTest {
     }
     @Test
     public void canGetInstrumentType(){
-        assertEquals("String", piano.getProductType());
+        assertEquals("Stringed", piano.getProductType());
     }
     @Test
     public void canGetNumberOfKeys(){
@@ -73,6 +73,12 @@ public class InstrumentTest {
     @Test
     public void canGetTinWhistleToPlay(){
         assertEquals("DiddleDiDiddleDo", tinWhistle.play());
+    }
+
+
+    @Test
+    public void canCalculateMarkUp(){
+        assertEquals(10.00, tinWhistle.calculateMarkup(), .0000001);
     }
 
 }

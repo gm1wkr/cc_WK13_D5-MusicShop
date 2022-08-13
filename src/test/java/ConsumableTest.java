@@ -37,6 +37,10 @@ public class ConsumableTest {
         assertEquals(0.50, plectrum.getCostPrice(), 0.0000001);
     }
 
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(1.50, plectrum.calculateMarkup(), 0.000001);
+    }
 
 
 }

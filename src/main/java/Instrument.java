@@ -1,24 +1,20 @@
-public abstract class Instrument {
+public abstract class Instrument extends Product implements ISell{
 
-    String name;
+
     String model;
     String description;
-    double retailPrice;
-    double costPrice;
-    String productType;
 
-    public Instrument(String name, String model, String description, double retailPrice, double costPrice, String instrumentType) {
-        this.name = name;
+    InstrumentType productType;
+
+    public Instrument(String name, String model, String description, double retailPrice, double costPrice, InstrumentType instrumentType) {
+        super(name, retailPrice, costPrice);
+
         this.model = model;
-        this.description = description;
-        this.retailPrice = retailPrice;
-        this.costPrice = costPrice;
         this.productType = instrumentType;
+        this.description = description;
     }
 
-    public String getName() {
-        return name;
-    }
+
 
     public String getModel() {
         return model;
@@ -28,15 +24,8 @@ public abstract class Instrument {
         return description;
     }
 
-    public double getRetailPrice() {
-        return retailPrice;
-    }
-
-    public double getCostPrice() {
-        return costPrice;
-    }
 
     public String getProductType() {
-        return productType;
+        return this.productType.name();
     }
 }
