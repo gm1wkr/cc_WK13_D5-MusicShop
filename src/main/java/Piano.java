@@ -12,10 +12,6 @@ public class Piano extends Instrument implements IPlay, ISell{
         return "Tinkle Tinkle";
     }
 
-    @Override
-    public double calculateMarkup() {
-        return this.getRetailPrice() - this.getCostPrice();
-    }
 
     public int getNumberOfKeys() {
         return this.numberOfKeys;

@@ -1,10 +1,9 @@
 public abstract class Instrument extends Product implements ISell{
 
 
-    String model;
-    String description;
-
-    InstrumentType productType;
+    private String model;
+    private String description;
+    private InstrumentType productType;
 
     public Instrument(String name, String model, String description, double retailPrice, double costPrice, InstrumentType instrumentType) {
         super(name, retailPrice, costPrice);

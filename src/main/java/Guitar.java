@@ -13,10 +13,6 @@ public class Guitar extends Instrument implements IPlay, ISell{
         return "Dwanggg";
     }
 
-    @Override
-    public double calculateMarkup() {
-        return this.getRetailPrice() - this.getCostPrice();
-    }
 
     public int getNumberOfStrings() {
         return this.numberOfStrings;

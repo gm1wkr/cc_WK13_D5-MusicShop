@@ -1,8 +1,6 @@
 public class Consumable extends Product implements ISell{
 
-    String name;
-    double retailPrice;
-    double costPrice;
+
 
     public Consumable(String name, double retailPrice, double costPrice) {
         super(name, retailPrice, costPrice);

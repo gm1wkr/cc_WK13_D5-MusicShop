@@ -12,10 +12,6 @@ public class TinWhistle extends Instrument implements IPlay, ISell{
         return "DiddleDiDiddleDo";
     }
 
-    @Override
-    public double calculateMarkup() {
-        return this.getRetailPrice() - this.getCostPrice();
-    }
 
     public String getKey() {
         return this.inKeyOf;
